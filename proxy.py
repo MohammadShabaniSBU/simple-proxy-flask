@@ -9,7 +9,7 @@ CORS(app)
 @app.route('/<path:path>', methods=['GET', 'POST'])
 def proxy(path):
 
-    target_url = 'https://space.storemore.es:8082/Demo' + request.path
+    target_url = 'https://space.storemore.es:8082/Spacemanager' + request.path
     headers = {key: value for key, value in request.headers.items() if key not in ('Host', 'Content-Length')}
     headers['Access-Control-Allow-Origin'] = '*'
 
